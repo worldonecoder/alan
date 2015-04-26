@@ -42,7 +42,8 @@ nav {
 	line-height:1.7em;
 }
 
-nav a {
+nav a,
+nav a:focus {
 	margin-left:40px;
 	color:#CAEFFE;
 }
@@ -69,15 +70,12 @@ nav a:hover {
 	margin-left:-50px;
 }
 
-<<<<<<< HEAD
 .circle .hover-span {
 	color:#CAEFFE;
 	font-size:20px;
 	text-align:center;
 }
 
-=======
->>>>>>> 14f5a2a993a4cbbdc669c136d1410ac093c8891c
 .portfolio-row {
 	
 }
@@ -87,7 +85,6 @@ nav a:hover {
 /*Footer*/
 
 footer {
-<<<<<<< HEAD
 	width:100%;
 	padding:20px 0px 40px 0px;
 	background:#2E282A;
@@ -130,9 +127,6 @@ footer form label {
 	color:#FFFFFF;
 	background:#CC0000;
 	border:none;
-=======
-
->>>>>>> 14f5a2a993a4cbbdc669c136d1410ac093c8891c
 }
 
 
@@ -265,7 +259,4 @@ footer form label {
 	-o-transition-timing-function: cubic-bezier(0.230, 1.000, 0.320, 1.000);
 	transition-timing-function: cubic-bezier(0.230, 1.000, 0.320, 1.000);
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> 14f5a2a993a4cbbdc669c136d1410ac093c8891c

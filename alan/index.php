@@ -4,15 +4,17 @@
 <title>Alan Drechsler Design</title>
 <meta name="description" content="" />
 <meta name="keywords" content="" />
-<base href="/alan/"/>
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
 <link href="fonts/fonts.css" rel="stylesheet" type="text/css" />
-<link href="style.css" rel="stylesheet" type="text/css" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
 
 <script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/jquery-ui.min.js"></script>
-<!--<script type="text/javascript" src="js/jquery.mobile.support.touch.js"></script>-->
-<script src="scripts.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/jquery-ui.js"></script>
+<script type="text/javascript">$(document).bind("mobileinit", function(){$.extend(  $.mobile , {autoInitializePage: false})});</script>
+<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+
+<script src="js/scripts.js" type="text/javascript"></script>
+
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="format-detection" content="telephone=no">
@@ -34,78 +36,9 @@
 		</div>
 	</header>
 
-	<article id="portfolio">
-		<div class="view view-home container">
-			<div class="row portfolio-row">
-				<div class="item col-sm-4">
-					<div class="circle">
-						<img src="images/portfolio/siamaks-home.jpg" alt="portfolio background" />
-					</div>
-				</div>
-				<div class="item col-sm-4">
-					<div class="circle">
-						<img src="images/portfolio/affordable-home.jpg" alt="portfolio background" />
-					</div>
-				</div>
-				<div class="item col-sm-4">
-					<div class="circle">
-						<img src="images/portfolio/umazda-home.jpg" alt="portfolio background" />
-					</div>
-				</div>
-			</div>
-			<div class="row portfolio-row">
-				<div class="item col-sm-4">
-					<div class="circle">
-						<img src="images/portfolio/roberson-home.jpg" alt="portfolio background" />
-					</div>
-				</div>
-				<div class="item col-sm-4">
-					<div class="circle">
-						<img src="images/portfolio/stirling-home.jpg" alt="portfolio background" />
-					</div>
-				</div>
-				<div class="item col-sm-4">
-					<div class="circle">
-						<img src="images/portfolio/atlas-home.jpg" alt="portfolio background" />
-					</div>
-				</div>
-			</div>
-			<div class="row portfolio-row">
-				<div class="item col-sm-4">
-					<div class="circle">
-						<img src="images/portfolio/autotown-home.jpg" alt="portfolio background" />
-					</div>
-				</div>
-				<div class="item col-sm-4">
-					<div class="circle">
-						<img src="images/portfolio/skyactiv-home.jpg" alt="portfolio background" />
-					</div>
-				</div>
-				<div class="item col-sm-4">
-					<div class="circle">
-						<img src="images/portfolio/vancouverrv-home.jpg" alt="portfolio background" />
-					</div>
-				</div>
-			</div>
-			<div class="row portfolio-row">
-				<div class="item col-sm-4">
-					<div class="circle">
-						<img src="images/portfolio/stayton-home.jpg" alt="portfolio background" />
-					</div>
-				</div>
-				<div class="item col-sm-4">
-					<div class="circle">
-						<img src="images/portfolio/canby-home.jpg" alt="portfolio background" />
-					</div>
-				</div>
-				<div class="item col-sm-4">
-					<div class="circle">
-						<img src="images/portfolio/couve-home.jpg" alt="portfolio background" />
-					</div>
-				</div>
-			</div>
-		</div>
-	</article>
+	<?
+		include 'home.php';
+	?>
 
 	<footer>
 		<div class="container">
@@ -126,13 +59,14 @@
 						<label for="enter-message">Your Message</label>
 						<textarea id="enter-message" class="form-control" rows="4"></textarea>
 					</div>
+
 					<button id="submit" type="submit" class="btn btn-default">Send Message</button>
 				</form>
 			</div>
 			<div class="col-sm-4">
 				<h1>Follow Me</h1>
-				<a id="linkedin" href="javascript:void(0);" onclick="alert('coming soon');">
-					<i class="fa fa-linkedin"></i>
+				<a id="linkedin" class="transitioner" href="javascript:void(0);" onclick="alert('coming soon');">
+					<i class="fa fa-linkedin transitioner"></i>
 				</a>
 			</div>
 		</div>	
