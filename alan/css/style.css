@@ -22,8 +22,8 @@ header {
 }
 
 #logo img {
-	width: 112px;
-	margin-top: -14px;
+	width: 110px;
+	margin-top: -4px;
 }
 
 #logo-text {
@@ -62,6 +62,7 @@ nav a:hover {
 	margin:20px auto;
 	overflow:hidden;
 	cursor:pointer;
+	position:relative;
 }
 
 .circle img {
@@ -69,17 +70,36 @@ nav a:hover {
 	margin-left:-50px;
 }
 
-<<<<<<< HEAD
-.circle .hover-span {
-	color:#CAEFFE;
+.circle .circle-caption {
+	background:#2E282A;
 	font-size:20px;
 	text-align:center;
+	width:100%;
+	height:27%;
+	display:block;
+	position:absolute;
+	bottom:0;
+	left:0;
+	color:#CAEFFE;
+	padding-top:3%;
 }
 
-=======
->>>>>>> 14f5a2a993a4cbbdc669c136d1410ac093c8891c
-.portfolio-row {
+.circle .circle-caption.hover {
+	height:100%;
+	background:#0179BB;
+}
+
+.circle .role,
+.circle .project {
+	display:block;
+}
+
+.circle .role.hover {
 	
+}
+
+.circle .project.hover {
+	margin-top:30%;
 }
 
 
@@ -87,7 +107,6 @@ nav a:hover {
 /*Footer*/
 
 footer {
-<<<<<<< HEAD
 	width:100%;
 	padding:20px 0px 40px 0px;
 	background:#2E282A;
@@ -121,6 +140,14 @@ footer #linkedin i {
 	margin-top:10px;
 }
 
+footer #linkedin.hover {
+	background:#CC0000;
+}
+
+footer #linkedin:hover i {
+	color:#FFFFFF;
+}
+
 footer form label {
 	color:#FFFFFF;
 	font-weight:300;
@@ -130,9 +157,6 @@ footer form label {
 	color:#FFFFFF;
 	background:#CC0000;
 	border:none;
-=======
-
->>>>>>> 14f5a2a993a4cbbdc669c136d1410ac093c8891c
 }
 
 
@@ -143,22 +167,67 @@ footer form label {
 
 /*Tablet Landscape Styles*/
 @media screen and (max-width: 1199px) {
+	.ru-lg {
+		display:none;
+	}
+}
 
+@media screen and (min-width: 1199px) {
+	.ro-lg {
+		display:none;
+	}
 }
 
 /*Tablet Portrait Styles*/
 @media screen and (max-width: 992px) {
+	.ru-md {
+		display:none;
+	}
+}
 
+@media screen and (min-width: 992px) {
+	.ro-md {
+		display:none;
+	}
 }
 
 /*Smartphone Styles Landscape*/
 @media screen and (max-width: 768px) {
+	.ru-sm {
+		display:none;
+	}
 
+	#logo img {
+		margin-top: 0px;
+	}
+
+	.circle {
+		width:60%;
+	}
+
+}
+
+@media screen and (min-width: 768px) {
+	.ro-sm {
+		display:none;
+	}
 }
 
 /*Smartphone Styles Portrait*/
 @media screen and (max-width: 480px) {
+	.ru-xs {
+		display:none;
+	}
 
+	.circle {
+		width:100%;
+	}
+}
+
+@media screen and (min-width: 480px) {
+	.ro-xs {
+		display:none;
+	}
 }
 
 /*Utility Styles*/
@@ -234,10 +303,10 @@ footer form label {
 }
 
 .transitioner-m {
-	-webkit-transition: all 600ms cubic-bezier(0.550, 0.055, 0.675, 0.190); 
-	-moz-transition: all 600ms cubic-bezier(0.550, 0.055, 0.675, 0.190); 
-	-o-transition: all 600ms cubic-bezier(0.550, 0.055, 0.675, 0.190); 
-	transition: all 600ms cubic-bezier(0.550, 0.055, 0.675, 0.190);
+	-webkit-transition: all 500ms cubic-bezier(0.550, 0.055, 0.675, 0.190); 
+	-moz-transition: all 500ms cubic-bezier(0.550, 0.055, 0.675, 0.190); 
+	-o-transition: all 500ms cubic-bezier(0.550, 0.055, 0.675, 0.190); 
+	transition: all 500ms cubic-bezier(0.550, 0.055, 0.675, 0.190);
 	-webkit-transition-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190); 
 	-moz-transition-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190); 
 	-o-transition-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190); 
@@ -265,7 +334,3 @@ footer form label {
 	-o-transition-timing-function: cubic-bezier(0.230, 1.000, 0.320, 1.000);
 	transition-timing-function: cubic-bezier(0.230, 1.000, 0.320, 1.000);
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> 14f5a2a993a4cbbdc669c136d1410ac093c8891c

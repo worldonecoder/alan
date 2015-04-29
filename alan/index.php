@@ -12,7 +12,7 @@
 <script type="text/javascript" src="js/jquery-ui.js"></script>
 <script type="text/javascript">$(document).bind("mobileinit", function(){$.extend(  $.mobile , {autoInitializePage: false})});</script>
 <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
-
+<script type="text/javascript" src="js/jquery.hoverIntent.js"></script>
 <script src="js/scripts.js" type="text/javascript"></script>
 
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
@@ -26,12 +26,16 @@
 			<div id="logo" class="pull-left">
 				<a href="javascript:void(0);">
 					<img src="images/logo.png" alt="logo"/>
-					<span id="logo-text" class="transitioner-xl">ALAN DRECHSLER DESIGN</span>
+					<span id="logo-text" class="transitioner-xl ru-sm">ALAN DRECHSLER DESIGN</span>
 				</a>
 			</div>
 			<nav class="pull-right">
-				<a href="javascript:void(0);" id="nav-portfolio" class="nav-item transitioner">PORTFOLIO</a>
-				<a href="javascript:void(0);" id="nav-contact" class="nav-item transitioner">CONTACT</a>				
+				<a href="javascript:void(0);" id="nav-portfolio" class="nav-item transitioner"><span class="ru-md">PORTFOLIO</span>
+					<i class="ro-md fa fa-home"></i>
+				</a>
+				<a href="javascript:void(0);" id="nav-contact" class="nav-item transitioner"><span class="ru-md">CONTACT</span>
+					<i class="ro-md fa fa-envelope"></i>
+				</a>				
 			</nav>
 		</div>
 	</header>
@@ -65,7 +69,7 @@
 			</div>
 			<div class="col-sm-4">
 				<h1>Follow Me</h1>
-				<a id="linkedin" class="transitioner" href="javascript:void(0);" onclick="alert('coming soon');">
+				<a id="linkedin" class="transitioner spin" href="javascript:void(0);" onclick="alert('coming soon');">
 					<i class="fa fa-linkedin transitioner"></i>
 				</a>
 			</div>
