@@ -93,6 +93,15 @@ jQuery(function($){
 		});
 	}
 
+	//run horizontal movement
+	var xScroll = function() {
+		//center the view
+		var calcMargins = function(a,b) {
+			var margin = ((a - b) / 2);
+		}
+		calcMargins($(window).width(),$('.container'));
+	}
+
 	//Execute after DOM is ready
 	$(document).ready(function(){
 		
@@ -107,7 +116,7 @@ jQuery(function($){
 
 			aPerfectCircle('.circle');
 
-
+			xScroll();
 
 			bsBools();
 
