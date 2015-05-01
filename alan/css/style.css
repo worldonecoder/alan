@@ -10,20 +10,25 @@ a:focus {
 	outline:0;
 }
 
+/*View Styles*/
+
+.view {
+	
+}
+
 /*Header Styles*/
 
 header {
 	background: #2E282A;
 	width:100%;
-	height:60px;
+	height:65px;
 	border-bottom:#D0D0D0 5px solid;
 	font-family: 'titillium_bdbold';
 	font-size:30px;
 }
 
 #logo img {
-	width: 110px;
-	margin-top: -4px;
+	vertical-align: top;
 }
 
 #logo-text {
@@ -63,6 +68,7 @@ nav a:hover {
 	overflow:hidden;
 	cursor:pointer;
 	position:relative;
+	-webkit-backface-visibility: hidden;
 }
 
 .circle img {
@@ -82,6 +88,7 @@ nav a:hover {
 	left:0;
 	color:#CAEFFE;
 	padding-top:3%;
+	-webkit-backface-visibility: hidden;
 }
 
 .circle .circle-caption.hover {
@@ -94,15 +101,61 @@ nav a:hover {
 	display:block;
 }
 
-.circle .role.hover {
-	
-}
-
 .circle .project.hover {
-	margin-top:30%;
+	margin-top:25%;
 }
 
+.circle .choice-container {
+	width:100%;
+	height:50px;
+	display:block;
+	margin-top:300px;
+}
 
+.circle.hover .choice-container {
+	margin-top:20px;
+}
+
+.circle .choice {
+	width:50px;
+	height:50px;
+	border-radius:50%;
+	border:2px solid #FFFFFF;
+	background:#CC0000;
+	display:block;
+}
+
+.circle .choice:hover {
+	background:#FFFFFF;
+	border:2px solid #0179BA;
+}
+
+.circle .choice i {
+	color:#FFFFFF;
+	margin-top:10px;
+	margin-left:2px;
+}
+
+.circle .choice:hover i {
+	color:#0179BA;
+}
+
+.circle .choice.website {
+	float:left;
+	margin-left:30%;
+}
+
+.circle .choice.learn {
+	float:right;
+	margin-right:30%;
+
+}
+
+.circle .prompt {
+	margin-top:10px;
+	color:#FFFFFF;
+	display:block;
+}
 
 /*Footer*/
 
@@ -110,6 +163,7 @@ footer {
 	width:100%;
 	padding:20px 0px 40px 0px;
 	background:#2E282A;
+	clear:both;
 }
 
 footer h1 {
@@ -183,6 +237,22 @@ footer form label {
 	.ru-md {
 		display:none;
 	}
+
+	.circle .choice.website {
+		margin-left:20%;
+	}
+
+	.circle .choice.learn {
+		margin-right:20%;
+	}
+
+	.circle.hover .choice-container {
+		margin-top:10px;
+	}
+
+	.circle .prompt {
+		display:none;
+	}
 }
 
 @media screen and (min-width: 992px) {
@@ -205,12 +275,29 @@ footer form label {
 		width:60%;
 	}
 
+	.circle.hover .choice-container {
+		margin-top:20px;
+	}
+
+	.circle .choice.website {
+		margin-left:30%;
+	}
+
+	.circle .choice.learn {
+		margin-right:30%;
+	}
+
+	.circle .prompt {
+		display:block;
+	}
+
 }
 
 @media screen and (min-width: 768px) {
 	.ro-sm {
 		display:none;
 	}
+
 }
 
 /*Smartphone Styles Portrait*/

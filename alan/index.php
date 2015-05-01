@@ -42,6 +42,7 @@
 
 	<?
 		include 'home.php';
+		include 'home2.php';
 	?>
 
 	<footer>

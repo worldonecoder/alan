@@ -80,6 +80,19 @@ jQuery(function($){
 		}
 	}
 
+	var toolTip = function(x,i){
+		$(i).hoverIntent(function(){
+			if($(this).hasClass('website')) {
+				$(x).text('Go To The Website');
+			}
+			else if($(this).hasClass('learn')) {
+				$(x).text('More About Project');
+			}
+		},function(){
+			$(x).text('');
+		});
+	}
+
 	//Execute after DOM is ready
 	$(document).ready(function(){
 		
@@ -87,6 +100,7 @@ jQuery(function($){
 
 		exeAnim('#linkedin','hover spun','i');
 		exeAnim('.circle','hover','.circle-caption, .project, .role');
+		toolTip('.prompt','.choice')
 
 		//Execute when window is resized as well as when DOM loads
 		$(window).resize(function(){

@@ -1,5 +1,3 @@
-
-	<article id="viewport">
 		<div class="view container">
 			<div class="row portfolio-row">
 				<div class="item col-sm-4">
