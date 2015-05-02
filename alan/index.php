@@ -39,12 +39,12 @@
 			</nav>
 		</div>
 	</header>
-
+	<main id="viewport">
 	<?php
 		include 'home.php';
 		include 'home2.php';
 	?>
-
+</main>
 	<footer>
 		<div class="container">
 			<div class="col-sm-4">

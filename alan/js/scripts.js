@@ -93,13 +93,28 @@ jQuery(function($){
 		});
 	}
 
-	//run horizontal movement
-	var xScroll = function() {
+	//run horizontal movement - dependancies: jquery 8+, bootstrap css grid
+	var xScroll = function(viewport,winWidth,view) {
+		//xScroll's global vars
+		var margin   = ((winWidth - view.width()) / 2) - 15;
+		var fullView = (view.width() + (margin * 2));
 		//center the view
-		var calcMargins = function(a,b) {
-			var margin = ((a - b) / 2);
+		var calcMargins = function() {
+			view.css({
+				'margin-left': margin
+			});
 		}
-		calcMargins($(window).width(),$('.container'));
+		calcMargins();
+
+		//set viewport width to total of all of the views and thier margins
+		var buildViewPort = function(){
+			var i     = 0;
+			var total = view.each(function(){
+				i += fullView;
+			});
+			viewport.width(i );
+		}
+		buildViewPort();
 	}
 
 	//Execute after DOM is ready
@@ -116,7 +131,7 @@ jQuery(function($){
 
 			aPerfectCircle('.circle');
 
-			xScroll();
+			xScroll($('#viewport'),$(window).width(),$('.view'));
 
 			bsBools();
 

@@ -39,12 +39,12 @@
 			</nav>
 		</div>
 	</header>
-
+	<main id="viewport">
 	<?php
-		include 'home.php';
-		include 'home2.php';
+		include 'portfolio.php';
+		include 'siamaks.php';
 	?>
-
+</main>
 	<footer>
 		<div class="container">
 			<div class="col-sm-4">

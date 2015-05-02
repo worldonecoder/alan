@@ -1,6 +1,4 @@
-
-	<article id="viewport">
-		<div class="view container">
+		<article id="portfolio" class="view container">
 			<div class="row portfolio-row">
 				<div class="item col-sm-4">
 					<div class="circle">
@@ -177,4 +175,4 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</article>
