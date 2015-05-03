@@ -1,6 +1,7 @@
 body {
 	font-family: 'titilliumregular';
 	background:url(../images/bg.jpg);
+	overflow-x:hidden;
 }
 
 a,
@@ -78,6 +79,8 @@ nav a:hover {
 	height:100%;
 	overflow:hidden;
 	border-radius:50%;
+	position:relative;
+	-webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
 }
 
 .circle img {
@@ -164,6 +167,17 @@ nav a:hover {
 	margin-top:10px;
 	color:#FFFFFF;
 	display:block;
+}
+
+#viewport {
+	-webkit-transition: all 500ms cubic-bezier(0.285, 0.970, 0.425, 0.920);
+	-moz-transition: all 500ms cubic-bezier(0.285, 0.970, 0.425, 0.920);
+	-o-transition: all 500ms cubic-bezier(0.285, 0.970, 0.425, 0.920);
+	transition: all 500ms cubic-bezier(0.285, 0.970, 0.425, 0.920);
+	-webkit-transition-timing-function: cubic-bezier(0.285, 0.970, 0.425, 0.920);
+	-moz-transition-timing-function: cubic-bezier(0.285, 0.970, 0.425, 0.920);
+	-o-transition-timing-function: cubic-bezier(0.285, 0.970, 0.425, 0.920);
+	transition-timing-function: cubic-bezier(0.285, 0.970, 0.425, 0.920);
 }
 
 /*Interior Pages*/

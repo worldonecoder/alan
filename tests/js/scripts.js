@@ -93,10 +93,11 @@ jQuery(function($){
 		});
 	}
 
-	//run horizontal movement - dependancies: jquery 8+, bootstrap css grid
-	var xScroll = function(viewport,winWidth,view) {
+	//run horizontal movement - dependencies: jquery 8+, bootstrap css grid
+	var xScroll = function(viewport,winWidth,view,circle,backHome,next,prev) {
 		//xScroll's global vars
-		var margin   = ((winWidth - view.width()) / 2) - 15;
+		var margin = ((winWidth - view.width()) / 2) - 15;
+		var toTop  = function(){$('html, body').animate({scrollTop:0})}; 
 		//center the view
 		var calcMargins = function() {
 			console.log('View\'s left margin is:' + ' ' + margin);
@@ -113,7 +114,7 @@ jQuery(function($){
 		var buildViewPort = function(){
 			if(winWidth > 767) {
 				var i     = 0;
-				var total = view.each(function(){
+				view.each(function(){
 					i += winWidth;
 				});
 				console.log('total viewport width is:' + ' ' + i);
@@ -125,19 +126,51 @@ jQuery(function($){
 		}
 		buildViewPort();
 
+		//Assign each portfolio item a unique id so that the appropriate view's position in the viewport can be found
+		var assignID = function(){
+			var id = 1;
+			circle.each(function(){
+				$(this).attr('id',id);
+				id += 1;
+			});
+		}
+		assignID();
+
+		//Send Viewport back to portfolio
+		backHome.on('click tap',function(){
+			viewport.css('margin-left',0);
+			toTop();
+		});
+
 		//Run xScroll Horizontal (non-smartphone views)
 		if(winWidth > 767) {
 		//Set scrolls from portfolio view to associated int view
-
-
+			var scrollEach  = winWidth - margin;
+			console.log('total item scroll is' + ' ' + scrollEach);
+			circle.find('.choice').on('click tap',function(){
+				var n      = $(this).parents('.circle').attr('id');
+				var scroll = scrollEach * n; 
+				viewport.css('margin-left', -scroll);
+				toTop();
+			});
+		//Go to prev and next views
+			var prevNext = function() {
+				next.on('click tap',function(){
+					var currentPos = viewport.css('margin-left');
+					viewport.css('margin-left', parseInt(currentPos) - scrollEach);
+				});
+				prev.on('click tap',function(){
+					var currentPos = viewport.css('margin-left');
+					viewport.css('margin-left', parseInt(currentPos) + scrollEach);
+				});
+			}
+			prevNext()
 		}
 		else {
 
 		}
 
 	}
-
-	
 
 	//Execute after DOM is ready
 	$(document).ready(function(){
@@ -153,7 +186,7 @@ jQuery(function($){
 
 			aPerfectCircle('.circle');
 
-			xScroll($('#viewport'),$(window).width(),$('.view'));
+			xScroll($('#viewport'),$(window).width(),$('.view'),$('.circle'),$('nav > #nav-portfolio'),$('.next-project'),$('.prev-project'));
 
 			bsBools();
 

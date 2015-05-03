@@ -43,6 +43,17 @@
 	<?php
 		include 'portfolio.php';
 		include 'siamaks.php';
+		include 'affordable.php';
+		include 'umazda.php';
+		include 'roberson.php';
+		include 'stirling.php';
+		include 'atlas.php';
+		include 'autotown.php';
+		include 'skyactiv.php';
+		include 'vancouverrv.php';
+		include 'stayton.php';
+		include 'canby.php';
+		include 'couve.php';
 	?>
 </main>
 	<footer>
