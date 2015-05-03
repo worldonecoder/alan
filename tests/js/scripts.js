@@ -97,28 +97,47 @@ jQuery(function($){
 	var xScroll = function(viewport,winWidth,view) {
 		//xScroll's global vars
 		var margin   = ((winWidth - view.width()) / 2) - 15;
-		var fullView = (view.width() + (margin * 2));
 		//center the view
 		var calcMargins = function() {
 			console.log('View\'s left margin is:' + ' ' + margin);
-			view.css({
-				'margin-left': margin
-			});
+			if(winWidth > 536) {
+				view.css({'margin-left': margin});
+			}
+			else {
+				view.css({'margin-left': 'auto'})
+			}
 		}
 		calcMargins();
 
 		//set viewport width to total of all of the views and thier margins
 		var buildViewPort = function(){
-			var i     = 0;
-			var total = view.each(function(){
-				i += fullView;
-			});
-			console.log('total viewport width is:' + ' ' + i);
-			viewport.width(i );
+			if(winWidth > 767) {
+				var i     = 0;
+				var total = view.each(function(){
+					i += winWidth;
+				});
+				console.log('total viewport width is:' + ' ' + i);
+				viewport.width(i);
+			}
+			else {
+				viewport.width('100%');
+			}
 		}
 		buildViewPort();
 
+		//Run xScroll Horizontal (non-smartphone views)
+		if(winWidth > 767) {
+		//Set scrolls from portfolio view to associated int view
+
+
+		}
+		else {
+
+		}
+
 	}
+
+	
 
 	//Execute after DOM is ready
 	$(document).ready(function(){
