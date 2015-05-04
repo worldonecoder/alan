@@ -42,6 +42,7 @@
 	<main id="viewport">
 	<?php
 		include 'portfolio.php';
+		echo    '<div id="detail-views" class="ru-sm">';
 		include 'siamaks.php';
 		include 'affordable.php';
 		include 'umazda.php';
@@ -54,6 +55,7 @@
 		include 'stayton.php';
 		include 'canby.php';
 		include 'couve.php';
+		echo    '</div>';
 	?>
 </main>
 	<footer>

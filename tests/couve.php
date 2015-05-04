@@ -14,7 +14,6 @@
 						<p>Malis voluptaria eu usu, probo nominavi scriptorem duo no. Iudico labores appareat sed ut. Facete omittam accusata cu mei, idque nonumy nominavi qui et. Adhuc iudicabit has in, eripuit abhorreant vel in.</p>
 						<p>Facete omittam accusata.</p>
 						<a class="go-to-site" href="http://www.carsinthecouve.com/" target="_blank">VIEW WEBSITE</a>
-						<a class="next-project" href="javascript:void(0);">NEXT PROJECT</a>
 						<a class="prev-project" href="javascript:void(0);">PREV PROJECT</a>
 					</div>
 				</div>

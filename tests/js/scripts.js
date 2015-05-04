@@ -1,5 +1,7 @@
 jQuery(function($){
 
+	var pos = 0;
+
 	//set portfolio item height based on col width
 	var aPerfectCircle = function(item) {
 		var w = $(item).width() + 30;
@@ -97,7 +99,7 @@ jQuery(function($){
 	var xScroll = function(viewport,winWidth,view,circle,backHome,next,prev) {
 		//xScroll's global vars
 		var margin = ((winWidth - view.width()) / 2) - 15;
-		var toTop  = function(){$('html, body').animate({scrollTop:0})}; 
+		var toTop  = function(){$('html, body').animate({scrollTop:0})};
 		//center the view
 		var calcMargins = function() {
 			console.log('View\'s left margin is:' + ' ' + margin);
@@ -140,6 +142,7 @@ jQuery(function($){
 		backHome.on('click tap',function(){
 			viewport.css('margin-left',0);
 			toTop();
+			pos = 0;
 		});
 
 		//Run xScroll Horizontal (non-smartphone views)
@@ -147,27 +150,46 @@ jQuery(function($){
 		//Set scrolls from portfolio view to associated int view
 			var scrollEach  = winWidth - margin;
 			console.log('total item scroll is' + ' ' + scrollEach);
-			circle.find('.choice').on('click tap',function(){
-				var n      = $(this).parents('.circle').attr('id');
+
+			var goToProject = function(){
+				var n      = parseInt($(this).parents('.circle').attr('id'));
 				var scroll = scrollEach * n; 
 				viewport.css('margin-left', -scroll);
 				toTop();
-			});
+				pos = n;
+				console.log(pos);
+			};
+
+			circle.find('.choice').on('click tap',goToProject);
+
+			var resetView = function() {
+				viewport.css('margin-left', -scrollEach * pos);
+			}
+			resetView();
+			
 		//Go to prev and next views
 			var prevNext = function() {
-				next.on('click tap',function(){
+				next.on('click tap',function(e){
 					var currentPos = viewport.css('margin-left');
 					viewport.css('margin-left', parseInt(currentPos) - scrollEach);
+					e.stopPropagation();
+					pos = pos + 1;
+					console.log(pos);
 				});
-				prev.on('click tap',function(){
+				prev.on('click tap',function(e){
 					var currentPos = viewport.css('margin-left');
 					viewport.css('margin-left', parseInt(currentPos) + scrollEach);
+					e.stopPropagation();
+					pos = pos - 1;
+					console.log(pos);
 				});
 			}
 			prevNext()
+
+		//Set viewport when screensize is changed
 		}
 		else {
-
+			viewport.css('margin-left', 0);
 		}
 
 	}
@@ -179,16 +201,17 @@ jQuery(function($){
 
 		exeAnim('#linkedin','hover spun','i');
 		exeAnim('.circle','hover','.circle-caption, .project, .role');
-		toolTip('.prompt','.choice')
+		toolTip('.prompt','.choice');
+		
 
 		//Execute when window is resized as well as when DOM loads
 		$(window).resize(function(){
 
 			aPerfectCircle('.circle');
 
-			xScroll($('#viewport'),$(window).width(),$('.view'),$('.circle'),$('nav > #nav-portfolio'),$('.next-project'),$('.prev-project'));
-
 			bsBools();
+
+			xScroll($('#viewport'),$(window).width(),$('.view'),$('.circle'),$('nav > #nav-portfolio'),$('.next-project'),$('.prev-project'));
 
 		}).resize();
 
