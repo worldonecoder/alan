@@ -41,20 +41,20 @@
 	</header>
 	<main id="viewport">
 	<?php
-		include 'portfolio.php';
+		include 'includes/portfolio.php';
 		echo    '<div id="detail-views" class="ru-sm">';
-		include 'siamaks.php';
-		include 'affordable.php';
-		include 'umazda.php';
-		include 'roberson.php';
-		include 'stirling.php';
-		include 'atlas.php';
-		include 'autotown.php';
-		include 'skyactiv.php';
-		include 'vancouverrv.php';
-		include 'stayton.php';
-		include 'canby.php';
-		include 'couve.php';
+		include 'includes/siamaks.php';
+		include 'includes/affordable.php';
+		include 'includes/umazda.php';
+		include 'includes/roberson.php';
+		include 'includes/stirling.php';
+		include 'includes/atlas.php';
+		include 'includes/autotown.php';
+		include 'includes/skyactiv.php';
+		include 'includes/vancouverrv.php';
+		include 'includes/stayton.php';
+		include 'includes/canby.php';
+		include 'includes/couve.php';
 		echo    '</div>';
 	?>
 </main>
