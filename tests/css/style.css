@@ -1,3 +1,7 @@
+html {
+	overflow-x:hidden;	
+}
+
 body {
 	font-family: 'titilliumregular';
 	background:url(../images/bg.jpg);
@@ -190,6 +194,62 @@ nav a:hover {
 	width:90%;
 	border:#D0D0D0 10px solid;
 }
+
+.project-buttons {
+	position:relative;
+	margin-top:25px;
+}
+
+.project .project-title {
+	font-family: 'titillium_bdbold';
+	color:#443A3D;
+	font-size:28px;
+}
+
+.project .project-role {
+	font-family: 'titilliumlight_italic';
+	color:#443A3D;
+	font-size:17px;
+}
+
+.project p {
+	font-family: 'titilliumregular';
+	font-size:16px;
+	color:#2E282A;
+}
+
+.project-buttons .go-to-site,
+.project-buttons .contact-alan,
+.project-buttons .next-project,
+.project-buttons .prev-project {
+	font-family: 'titilliumregular';
+	font-size:14px;
+	color:#FFFFFF;
+	padding:7px 12px;
+	background:#CC0000;
+	border-radius:5px;
+}
+
+.project-buttons .prev-next-container {
+	width:100%;
+	margin-top:20px;
+}
+
+.project-buttons .next-project i {
+	margin-left:5px;
+}
+
+.project-buttons .prev-project i {
+	margin-right:5px;
+}
+
+.project-buttons .go-to-site:hover,
+.project-buttons .contact-alan:hover,
+.project-buttons .next-project:hover,
+.project-buttons .prev-project:hover {
+	background: #0179BB;
+}
+
 
 /*Footer*/
 

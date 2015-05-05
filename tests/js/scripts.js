@@ -198,6 +198,7 @@ jQuery(function($){
 	$(document).ready(function(){
 		
 		goToContact('#nav-contact');
+		goToContact('.contact-alan');
 
 		exeAnim('#linkedin','hover spun','i');
 		exeAnim('.circle','hover','.circle-caption, .project, .role');
