@@ -68,17 +68,17 @@
 			</div>
 			<div class="col-sm-4">
 				<h1>Contact Me</h1>
-				<form action="send-info.php">
+				<form action="form/contactengine.php">
 					<div class="form-group">
-						<label for="enter-email">Email Address</label>
-						<input type="email" id="enter-email" class="form-control" />
+						<label for="Email">Email Address</label>
+						<input type="text" id="Email" class="form-control" name="Email" />
 					</div>
 					<div class="form-group">
-						<label for="enter-message">Your Message</label>
-						<textarea id="enter-message" class="form-control" rows="4"></textarea>
+						<label for="Message">Your Message</label>
+						<textarea id="Message" class="form-control" rows="4" name="Message"></textarea>
 					</div>
 
-					<button id="submit" type="submit" class="btn btn-default">Send Message</button>
+					<button id="submit" name="submit" type="submit" class="btn btn-default">Send Message</button>
 				</form>
 			</div>
 			<div class="col-sm-4">
@@ -89,6 +89,7 @@
 			</div>
 		</div>	
 	</footer>
+	<a id="to-the-top" href="javascript:void(0);"><i class="fa fa-caret-up"></i></a>
 
 
 

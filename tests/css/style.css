@@ -30,6 +30,10 @@ header {
 	border-bottom:#D0D0D0 5px solid;
 	font-family: 'titillium_bdbold';
 	font-size:30px;
+	position:fixed;
+	z-index:9999;
+	-webkit-box-shadow: 0 2px 5px 3px rgba(0,0,0,0.5);
+	box-shadow: 0 2px 5px 3px rgba(0,0,0,0.5);
 }
 
 #logo img {
@@ -63,6 +67,10 @@ nav a:hover {
 }
 
 /*Content*/
+
+main {
+	margin-top:65px;
+}
 
 .circle {
 	background:#000000;
@@ -301,6 +309,23 @@ footer form label {
 	font-weight:300;
 }
 
+#to-the-top {
+	display:none;
+	width:50px;
+	height:50px;
+	background:rgba(0,0,0,0.35);
+	position:fixed;
+	bottom:10px;
+	right:10px;
+	border-radius:5px;
+}
+
+#to-the-top i {
+	color:rgba(202, 239, 254, 0.75);
+	font-size:40px;
+	margin:2px 0 0 13px;
+}
+
 #submit {
 	color:#FFFFFF;
 	background:#CC0000;
@@ -356,9 +381,13 @@ footer form label {
 }
 
 /*Smartphone Styles Landscape*/
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
 	.ru-sm {
 		display:none;
+	}
+
+	#to-the-top {
+		display:block;
 	}
 
 	#logo img {
@@ -387,7 +416,7 @@ footer form label {
 
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 767px) {
 	.ro-sm {
 		display:none;
 	}

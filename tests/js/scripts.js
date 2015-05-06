@@ -33,39 +33,6 @@ jQuery(function($){
 		});
 	}
 
-	var bsBools = function() {
-		xs = false;
-		sm = false;
-		md = false;
-		lg = false;
-		var w = $(window).width();
-		
-		if(w < 768) {
-			xs = true;
-			sm = false;
-			md = false;
-			lg = false;
-		}
-		else if(w < 992 && w >= 768) {
-			xs = true;
-			sm = true;
-			md = false;
-			lg = false;
-		}
-		else if(w < 1199 && w >= 993) {
-			xs = true;
-			sm = true;
-			md = true;
-			lg = false;
-		}
-		else {
-			xs = true;
-			sm = true;
-			md = true;
-			lg = true;			
-		}
-		//test: console.log('bs bool variables are:' + ' ' + xs + ',' + sm + ',' + md + ',' + lg);
-	}
 
 	var toggle = function() {
 		if(lg === true) {
@@ -93,6 +60,27 @@ jQuery(function($){
 		},function(){
 			$(x).text('');
 		});
+	}
+
+	var mobileLinks = function() {
+		$('.circle').on('tap click', function(e){
+			if($(window).width() < 768) {
+				var url = $(this).find('.website').attr('href');
+				window.open(url);
+				e.stopPropagation();
+			}
+		});
+	}
+
+	var toggleT3 = function() {
+		$(window).scroll(function() {
+			if($(this).scrollTop() > 1000) {
+				$('#to-the-top').fadeIn(300);
+			}
+			else {
+				$('#to-the-top').fadeOut(300);
+			}
+		}).scroll()
 	}
 
 	//run horizontal movement - dependencies: jquery 8+, bootstrap css grid
@@ -183,6 +171,12 @@ jQuery(function($){
 					pos = pos - 1;
 					console.log(pos);
 				});
+				view.on('swipeleft',function(){
+					$(this).find(next).trigger('click');
+				});
+				view.on('swiperight',function(){
+					$(this).find(prev).trigger('click');
+				});
 			}
 			prevNext()
 
@@ -199,7 +193,7 @@ jQuery(function($){
 		
 		goToContact('#nav-contact');
 		goToContact('.contact-alan');
-
+		mobileLinks();
 		exeAnim('#linkedin','hover spun','i');
 		exeAnim('.circle','hover','.circle-caption, .project, .role');
 		toolTip('.prompt','.choice');
@@ -208,11 +202,11 @@ jQuery(function($){
 		//Execute when window is resized as well as when DOM loads
 		$(window).resize(function(){
 
+			toggleT3();
+
 			aPerfectCircle('.circle');
 
-			bsBools();
-
-			xScroll($('#viewport'),$(window).width(),$('.view'),$('.circle'),$('nav > #nav-portfolio'),$('.next-project'),$('.prev-project'));
+			xScroll($('#viewport'),$(window).width(),$('.view'),$('.circle'),$('nav > #nav-portfolio, #logo > a, #to-the-top'),$('.next-project'),$('.prev-project'));
 
 		}).resize();
 
