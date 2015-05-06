@@ -1,7 +1,7 @@
 <?php
 
 $EmailFrom = "mailbot";
-$EmailTo = "adam@worldonewebdesign.com";
+$EmailTo = "alandrechsler@comcast.net";
 $Subject = "Someone Filled Out Your Form"; 
 $Email = Trim(stripslashes($_POST['Email'])); 
 $Message = Trim(stripslashes($_POST['Message'])); 
