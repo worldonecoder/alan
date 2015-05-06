@@ -68,10 +68,10 @@
 			</div>
 			<div class="col-sm-4">
 				<h1>Contact Me</h1>
-				<form action="form/contactengine.php">
+				<form method="post" action="form/contactengine.php">
 					<div class="form-group">
 						<label for="Email">Email Address</label>
-						<input type="text" id="Email" class="form-control" name="Email" />
+						<input type="email" id="Email" class="form-control" name="Email" />
 					</div>
 					<div class="form-group">
 						<label for="Message">Your Message</label>
