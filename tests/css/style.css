@@ -123,6 +123,7 @@ main {
 .circle .role,
 .circle .project {
 	display:block;
+	line-height:24px;
 }
 
 .circle .project.hover {
@@ -377,6 +378,15 @@ footer form label {
 @media screen and (min-width: 992px) {
 	.ro-md {
 		display:none;
+	}
+}
+
+@media screen and (min-width: 767px) and (max-width: 992px) {
+	.circle .project,
+	.circle .role {
+		display:block;
+		line-height:20px;
+		font-size:16px;
 	}
 }
 
